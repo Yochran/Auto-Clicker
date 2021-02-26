@@ -1,5 +1,5 @@
-#include "Utils.cpp"
-#include "ClickUtil.cpp"
+#include "Utils.h"
+#include "ClickUtil.h"
 
 #include <iostream>
 #include <Windows.h>
@@ -8,22 +8,22 @@
 
 using namespace std;
 
+Utilities UTILS;
+ClickUtilities CLICK_UTILS;
+
 void main()
 {
-    Utilities utils;
-    ClickUtilities cUtils;
-
     system("title Auto Clicker v1.0");
     system("color 0f");
 
-    utils.sendMessage("Welcome to the autoclicker.");
-    utils.sendMessage("Once click delay is inputted, press Q to toggle on, Z to toggle off.");
+    UTILS.sendMessage("Welcome to the autoclicker.");
+    UTILS.sendMessage("Once click delay is inputted, press Q to toggle on, Z to toggle off.");
 
     // Input Value:
-    utils.sendMessage("Enter Click Delay (MS):");
+    UTILS.sendMessage("\nEnter Click Delay (MS):");
 
-    int cd;
-    cin >> cd;
+    int C_CD;
+    cin >> C_CD;
 
-    cUtils.autoClicker(cd);
+    CLICK_UTILS.autoClicker(C_CD);
 }
