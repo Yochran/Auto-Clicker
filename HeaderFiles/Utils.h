@@ -14,7 +14,6 @@ public:
 
 	string input(string MESSAGE) {
 		cin >> MESSAGE;
-
 		return MESSAGE;
 	}
 };
